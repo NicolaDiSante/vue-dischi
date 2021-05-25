@@ -2,7 +2,9 @@
   <main>
     <div class="container tex-center pt-5">
      <div class="row">
-     
+        <Search
+        v-for="record in records" :key="record.genre" :record="record"
+        />
         <Record
          v-for="record in records" :key="record.title" :record="record"
         />
@@ -20,6 +22,7 @@
 <script>
 import Record from '@/components/Record.vue'
 import axios from 'axios';
+import Search from './Search.vue';
 
 export default {
   data(){
@@ -30,8 +33,10 @@ export default {
     } 
   },
   components: { 
-    Record
+    Record,
+    Search
   },
+  
   name: 'Main',
   created(){
     axios.get('https://flynn.boolean.careers/exercises/api/array/music')
@@ -45,6 +50,12 @@ export default {
       })
 
   },
+
+  /* computed:{
+    filteredArr(){
+      return this.records.filter(item => )
+    }
+  },  */
 }
 
 </script>
@@ -55,7 +66,7 @@ export default {
 
 main{
   background-color: #1e2d3b;
-  height: calc(100vh - 60px);
+  height: 100%;
   width: 100%;
 }
 

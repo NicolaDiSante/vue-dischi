@@ -1,7 +1,7 @@
 <template>
 
   
-  <div class="box col-lg-2 text-center text-uppercase">
+  <div class="box col-md-4 col-lg-2 text-center text-uppercase">
     
    <div class="row">
 
