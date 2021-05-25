@@ -1,6 +1,8 @@
 <template>
   <header>
-    <div class="image">Logo</div>
+    <div class="image">
+      <img src="@/assets/img/logo-small.svg" alt="">
+    </div>
   </header>
 </template>
 
@@ -16,6 +18,16 @@ header{
   height: 60px;
   width: 100%;
   background-color: rgb(75, 75, 75);
+  .image{
+    padding: 10px;
+    img{
+    height: 40px;
+    width: 40px;
+    color: green;
+    cursor: pointer;
+  }
+  }
+  
 }
 
 

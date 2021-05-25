@@ -26,6 +26,7 @@ export default {
     return{
       records: [],
       axios,
+      
     } 
   },
   components: { 
@@ -37,6 +38,7 @@ export default {
       .then(res=> {
         console.log(res.data.response)     
         this.records = res.data.response
+        
       })
       .catch(err => {
         console.log(err)
